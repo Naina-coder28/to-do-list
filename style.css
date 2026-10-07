@@ -1,1 +1,206 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+/* Page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Main container */
+.todo-container {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+/* Form */
+#todo-form {
+    margin-bottom: 25px;
+}
+
+#todo-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+}
+
+#todo-input:focus {
+    outline: 3px solid #f59e0b;
+    outline-offset: 2px;
+}
+
+/* Buttons */
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.input-group button {
+    background-color: #4f46e5;
+    color: white;
+}
+
+.input-group button:hover {
+    background-color: #3730a3;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #4f46e5;
+    color: white;
+}
+
+/* Task heading */
+h2 {
+    margin-bottom: 15px;
+}
+
+/* Task list */
+#task-list {
+    list-style: none;
+}
+
+/* Individual task */
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+/* Task text */
+.task-text {
+    flex: 1;
+}
+
+/* Completed task */
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Task buttons */
+.task-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.edit-btn {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #dc2626;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #d97706;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
+/* Empty message */
+#empty-message {
+    text-align: center;
+    color: #6b7280;
+    padding: 20px;
+}
+
+/* Keyboard focus */
+button:focus {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .todo-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group button {
+        width: 100%;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .task-item {
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        flex-direction: column;
+    }
+}
